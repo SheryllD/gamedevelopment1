@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Baz the Bug Busher</title>
+  </head>
+  <body>
+    <div id="startscreen" class="box">
+      <h1>Baz the Bug Busher</h1>
+      <img src="./images/Bazthebugbusherlogo.jpeg" alt="Baz the Bug Busher" class="logo" />
+      <div class="instructions"">
+      <h2>Welcome to Bash the Bug Basher</h2>
+      <div id="intro">
+        <p>
+            Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld,
+            Berlin, where a peaceful hot Sunday barbecue in June turns into a battle. </br>
+            As the sun sets, an unexpected threat emerges – a horde of mischievous June Bugs! 
+            Play as Baz the Bug Basher and embark on a mission to defend and face off these insects.</br> 
+            Armed with only your bare hands, you must protect your companions, Gabs, Magic Mike, Sherry and Ollie.
+            Your mission is clear: ensure the survival of your companions. </br> Defeat the June bugs and emerge as the 
+            ultimate victor. But be warned, if any of your friends perish, the game is lost! Can you rise to the 
+            challenge and save the day with your bare-handed heroics? </br> The destiny of your friends rests in your 
+            hands! Become their fearless savior and eliminate the clumsy bugs.
+        </p>
+      </div>
+     </div> 
+     <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatar-bas" />
+    </br> 
+     <img src="./images/avatar.gabs.png" alt="Avatar Bas the Bug Busher" class="avatar-gabs" />
+     <img src="./images/avatar.oliva.png" alt="Avatar Bas the Bug Busher" class="avatar-ollie" />
+     <img src="./images/avatarmagicmike.png" alt="Avatar Bas the Bug Busher" class="avatar-magicmike" />
+     <img src="./images/avatar.sherry.png" alt="Avatar Bas the Bug Busher" class="avatar-sherry" />
+      <div id="instructions"></div>
+    </br>
+</br>
+      <button id="startBtn">Start Game</button>
+      <button id="instructionsBtn">Instructions</button>
+      <button id="muteBtn">Mute: <span class="muteText">off</span></button>
+    </div>
+
+    <div id="game-screen" class="boxNoBorder">
+      <div id="scoring">
+        <p id="score">
+          <span> Score: </span>
+          <span id="score-num"> 0 </span>
+        </p>
+        <p id="lives">
+          <span> Lives: </span>
+          <span id="lives-num"> 3 </span>
+        </p>
+      </div>
+      <canvas id="canvas" width="900" height="700"></canvas>
+    </div>
+    <div class="gameover box">
+      <h1 id="gameOverTitle">Game Over!</h1>
+      <p id="easter">Next time better!</p>
+      <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Basher" class="BasPlayer">
+      <p><span>Your score:</span> <span id="final-score"></span></p>
+      <button id="restartBtn">Try again!</button>
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <img src="./images/junebug.png" alt="Avatar Bas the Bug Busher" class="avatar-junebug"/>
+  </body>
+</html>
+
+

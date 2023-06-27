@@ -1,0 +1,84 @@
+body {
+    padding: 0px;
+    text-align: center;
+    font-family: "Verdana";
+    background-position: center;
+    background-size: 100% 200%;
+    background-color: white; 
+    color: black;
+    font-size: 1.5em;
+  }
+  canvas {
+    border: 1px solid #aff2b4;
+    float :center;
+  }
+ 
+  .logo {
+    width: 400px;
+  }
+
+  .box {
+    border: solid;
+    background-color: white;
+    border-width: 10px;
+  }
+  
+
+  body button {
+    font-size: 30px;
+    background-color: silver;
+    color: rgb(100, 90, 0);
+    padding: 20px 40px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  #startscreen {
+    float: center;
+  }
+  
+  #game-screen {
+      float: center;
+      padding: 10px 0px;
+      background-image: 
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 20%, 20%;
+  }
+  
+  .gameover {
+    float: center;
+    padding: 20px 0px;
+  }
+
+  #score {
+    padding-right: 10px;
+    margin: 0px;
+  }
+  #lives {
+    padding : 0px;
+    margin: 0px;
+  }
+  #scoring {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+  }
+
+  .boxNoBorder {
+    background-color: rgba(0,0,0,.5);
+  }
+
+  .hawkeye {
+    width: 150px;
+  }
+
+#avatar-junebug{ 
+width: 10px
+height: 10px
+}
