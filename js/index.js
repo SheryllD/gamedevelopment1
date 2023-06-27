@@ -23,14 +23,18 @@ music.volume = 0.01;
 const slapTheBug = new Audio("./sounds/slapthebug.wav");
 slapTheBug.volume = 0.2;
 
-bug_dying.volume = new Audio("./sounds/bug_dying.wav");
-const bug_dying = 0.03;
+const bug_dying = new Audio("./sounds/bug_dying.wav");
+bug_dying.volume = 0.03;
 
 const girlAskHelp = new Audio("./sounds/girls_help-me.ogg");
 slapTheBug.volume = 0.2;
 
+const audio = document.getElementById('myAudio');
+audio.play();
+
 const MagicMikeAskHelp = new Audio(".sounds/magicmike_help.wav");
-slapTheBug.volume = 0.2;
+slapTheBug.volume = 0.2
+
 //const fail = new Audio("./Sounds/fail sound.wav");
 //fail.volume = 0.1;
 //const howl = new Audio("./Sounds/howl.wav");
@@ -57,7 +61,6 @@ avatarMagicMike .src = "./images/avatarmagicmike.png";
 
 const juneBug = new Image();
 juneBug.src = "./images/junebug.png";
-
 
 //player position and size
 let playerX = 0;
@@ -321,3 +324,20 @@ window.onload = () => {
     start.style.display = "block";
   };
 };
+
+function toggleMute() {
+    const audio = document.getElementById('myAudio');
+    const muteBtn = document.getElementById('muteBtn');
+    const muteText = document.getElementById('muteText');
+  
+    if (audio.muted) {
+      audio.muted = false;
+      muteText.textContent = 'off';
+      muteBtn.classList.remove('muted');
+    } else {
+      audio.muted = true;
+      muteText.textContent = 'on';
+      muteBtn.classList.add('muted');
+    }
+  }
+  

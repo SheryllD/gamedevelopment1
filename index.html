@@ -11,7 +11,7 @@
     <div id="startscreen" class="box">
       <h1>Baz the Bug Busher</h1>
       <img src="./images/Bazthebugbusherlogo.jpeg" alt="Baz the Bug Busher" class="logo" />
-      <div class="instructions"">
+      <div class="instructions">
       <h2>Welcome to Bash the Bug Basher</h2>
       <div id="intro">
         <p>
@@ -27,19 +27,35 @@
         </p>
       </div>
      </div> 
-     <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatar-bas" />
-    </br> 
-     <img src="./images/avatar.gabs.png" alt="Avatar Bas the Bug Busher" class="avatar-gabs" />
-     <img src="./images/avatar.oliva.png" alt="Avatar Bas the Bug Busher" class="avatar-ollie" />
-     <img src="./images/avatarmagicmike.png" alt="Avatar Bas the Bug Busher" class="avatar-magicmike" />
-     <img src="./images/avatar.sherry.png" alt="Avatar Bas the Bug Busher" class="avatar-sherry" />
-      <div id="instructions"></div>
-    </br>
+<div id="instructions"> 
+    <b>Instructions:</b>
+</br>
+    <img id="arrowImage" src="./images/—Pngtree—keyboard arrow keys_7260323.png" alt="arrow-img"/>
+</br>
+    Move Baz using arrow keys:</br>
+    Arrow left: Move Baz left.</br>
+    Arrow right: Move Baz right.</br>
+    Arrow up: Move Baz up.</br>
+    Arrow down: Move Baz down.</br>
+</br>
+    Press Space to eliminate the June Bug. 
+
+</div>
 </br>
       <button id="startBtn">Start Game</button>
       <button id="instructionsBtn">Instructions</button>
-      <button id="muteBtn">Mute: <span class="muteText">off</span></button>
+      <button id="muteBtn" onclick="toggleMute()">Mute: <span id="muteText">off</span></button>
+      <audio id="myAudio" src="sounds/gamesounds.wav"></audio>
     </div>
+
+    <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatarBas" />
+</br> 
+     <img src="./images/avatar.gabs.png" alt="Avatar Bas Gabs" class="avatarGabs" />
+     <img src="./images/avatar.oliva.png" alt="Avatar Ollie" class="avatarOllie" />
+     <img src="./images/avatarmagicmike.png" alt="Avatar Magic Mike" class="avatarMagicMike" />
+     <img src="./images/avatar.sherry.png" alt="Avatar Sherry" class="avatarSherry" />
+      <div id="instructions"></div>
+    </br>
 
     <div id="game-screen" class="boxNoBorder">
       <div id="scoring">
@@ -52,18 +68,19 @@
           <span id="lives-num"> 3 </span>
         </p>
       </div>
-      <canvas id="canvas" width="900" height="700"></canvas>
+      <canvas id="canvas" width="1000" height="800"></canvas>
     </div>
-    <div class="gameover box">
+
+    <div class="gameOverBox">
       <h1 id="gameOverTitle">Game Over!</h1>
-      <p id="easter">Next time better!</p>
+      <p id="easter">Next time Better!</p>
       <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Basher" class="BasPlayer">
       <p><span>Your score:</span> <span id="final-score"></span></p>
-      <button id="restartBtn">Try again!</button>
+      <button id="restartBtn">Try Again!</button>
     </div>
 
     <script type="text/javascript" src="./js/index.js"></script>
-    <img src="./images/junebug.png" alt="Avatar Bas the Bug Busher" class="avatar-junebug"/>
+   
   </body>
 </html>
 

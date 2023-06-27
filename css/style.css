@@ -3,9 +3,9 @@ body {
     text-align: center;
     font-family: "Verdana";
     background-position: center;
-    background-size: 100% 200%;
     background-color: white; 
     color: black;
+    background-size: 100% 200%;
     font-size: 1.5em;
   }
   canvas {
@@ -20,13 +20,12 @@ body {
   .box {
     border: solid;
     background-color: white;
-    border-width: 10px;
+    border-width: 5px;
   }
   
-
   body button {
     font-size: 30px;
-    background-color: silver;
+    background-color: #cce840;
     color: rgb(100, 90, 0);
     padding: 20px 40px;
     border: 0;
@@ -74,11 +73,16 @@ body {
     background-color: rgba(0,0,0,.5);
   }
 
-  .hawkeye {
+  . {
     width: 150px;
   }
 
 #avatar-junebug{ 
 width: 10px
 height: 10px
+}
+
+#arrowImage {
+    width: 250px;
+    height: 250px; 
 }
