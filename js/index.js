@@ -1,12 +1,15 @@
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight; 
+
 const start = document.querySelector("#startscreen");
 const introText = document.querySelector("#intro");
 const gameScreen = document.querySelector("#game-screen");
 gameScreen.style.display = "none";
 const overScreen = document.querySelector(".gameover");
-overScreen.style.display = "none";
-const instructions = document.querySelector("#instructions");
+//overScreen.style.display = "none";
+//const instructions = document.querySelector("#instructions");
 instructions.style.display = "none";
 const gameOverTitle = document.querySelector("#gameOverTitle");
 const scorePlace = document.querySelector("#score-num");
@@ -15,6 +18,100 @@ const finalScore = document.querySelector("#final-score");
 const easterEgg = document.querySelector("#easter");
 const muteText = document.querySelector(".muteText");
 
+document.addEventListener("DOMContentLoaded", function() {
+    const startButton = document.getElementById("startButton");
+    startButton.addEventListener("click", startGame);
+  
+    function startGame() {
+      console.log("Game started!");
+    }
+  });
+
+//creating the player
+class Player {
+    constructor() {
+      this.velocity = {
+        x: 0,
+        y: 0,
+      };
+  
+      const image = new Image();
+      image.src = "./images/avatarbass.png";
+      image.onload = () => {
+        this.image = image;
+        this.width = image.width;
+        this.height = image.height;
+        this.position = {
+          x: canvas.width / 2 - this.width / 2,
+          y: canvas.height - this.height - 50,
+        };
+      };
+    }
+  
+    draw() {
+      if (this.image)
+        ctx.drawImage(
+          this.image,
+          this.position.x,
+          this.position.y,
+          this.width,
+          this.height
+        );
+    }
+  
+    update () {
+    if (this.image) {
+        this.draw()
+        this.position.x += this.velocity.x
+    }
+    }
+
+    moveLeft() {
+      this.position.x -= 5;
+    }
+  
+    moveRight() {
+      this.position.x += 5;
+    }
+  
+    moveUp() {
+      this.position.y -= 5;
+    }
+  
+    moveDown() {
+      this.position.y += 5;
+    }
+  }
+  
+  const player = new Player();
+  player.draw();
+  
+  function animate() {
+    requestAnimationFrame(animate);
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    player.draw();
+  }
+  
+  animate();
+  addEventListener("keydown", ({ key }) => {
+    switch (key) {
+      case "ArrowLeft":
+        player.moveLeft();
+        break;
+      case "ArrowRight":
+        player.moveRight();
+        break;
+      case "ArrowUp":
+        player.moveUp();
+        break;
+      case "ArrowDown":
+        player.moveDown();
+        break;
+    }
+  });
+
+/*
 //sounds
 const music = new Audio("./sounds/gamemusicbaz.wav");
 music.volume = 0.01;
@@ -39,13 +136,15 @@ slapTheBug.volume = 0.2
 //fail.volume = 0.1;
 //const howl = new Audio("./Sounds/howl.wav");
 //howl.volume = 0.1;
+*/ 
 
+/*
 //images
 const background = new Image();
 background.src = "./images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture.jpg";
 
-const avatarBas = new Image();
-avatarBas.src = "./images/avatarbass.png";
+//const avatarBas = new Image();
+//avatarBas.src = "./images/avatarbass.png";
 
 const avatarSherry = new Image();
 avatarSherry.src = "./images/avatar.sherry.png";
@@ -340,3 +439,4 @@ function toggleMute() {
     }
   }
   
+*/ 

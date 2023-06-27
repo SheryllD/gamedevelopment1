@@ -1,4 +1,5 @@
 body {
+    margin: ;
     padding: 0px;
     text-align: center;
     font-family:'Times New Roman', Times, serif
@@ -92,10 +93,6 @@ body {
 
   .boxNoBorder {
     background-color: rgba(0,0,0,.5);
-  }
-
-  . {
-    width: 150px;
   }
 
 #avatar-junebug{ 
