@@ -16,7 +16,7 @@ const easterEgg = document.querySelector("#easter");
 const muteText = document.querySelector(".muteText");
 
 //sounds
-const music = new Audio("./sounds/gamesounds.wav");
+const music = new Audio("./sounds/gamemusicbaz.wav");
 music.volume = 0.01;
 //const victory = new Audio("./Sounds/Game Over Screen.mp3");
 //victory.volume = 0.2;
@@ -44,8 +44,8 @@ slapTheBug.volume = 0.2
 const background = new Image();
 background.src = "./images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture.jpg";
 
-const basPlayer = new Image();
-basPlayer.src = "./images/avatarbass.png";
+const avatarBas = new Image();
+avatarBas.src = "./images/avatarbass.png";
 
 const avatarSherry = new Image();
 avatarSherry.src = "./images/avatar.sherry.png";
@@ -57,7 +57,7 @@ const avatarOllie = new Image();
 avatarOllie .src = "./images/avatar.oliva.png";
 
 const avatarMagicMike = new Image();
-avatarMagicMike .src = "./images/avatarmagicmike.png";
+avatarMagicMike.src = "./images/avatarmagicmike.png";
 
 const juneBug = new Image();
 juneBug.src = "./images/junebug.png";
@@ -93,20 +93,20 @@ let isGameMuted = false;
 
 //enemies
 const enemies = [
-  { x: 1200, y: Math.random() * (canvas.height - charHeight), img: enemyImg1 },
-  { x: 1400, y: Math.random() * (canvas.height - charHeight), img: enemyImg2 },
-  { x: 1600, y: Math.random() * (canvas.height - charHeight), img: enemyImg3 },
+  { x: 1200, y: Math.random() * (canvas.height - charHeight), img: juneBug },
+  { x: 1400, y: Math.random() * (canvas.height - charHeight), img: juneBug },
+  { x: 1600, y: Math.random() * (canvas.height - charHeight), img: juneBug },
 ];
 
 class Projectile {
   constructor({ x, y }) {
     this.x = x;
     this.y = y;
-    this.image = arrowImg;
+    this.image = juneBug;
   }
 
   draw() {
-    ctx.drawImage(this.image, this.x, this.y, 25, 15);
+    ctx.juneBug(this.image, this.x, this.y, 25, 15);
   }
   update() {
     this.draw();
@@ -151,7 +151,7 @@ const animate = () => {
   //enemies moving
   for (let i = 0; i < enemies.length; i += 1) {
     let current = enemies[i];
-    ctx.drawImage(current.img, current.x, current.y, charWidth, charHeight);
+    ctx.juneBug(current.img, current.x, current.y, charWidth, charHeight);
     current.x -= enemySpeed;
     if (current.x < 0) {
       current.x = 900 + charWidth;
@@ -326,10 +326,9 @@ window.onload = () => {
 };
 
 function toggleMute() {
-    const audio = document.getElementById('myAudio');
+    const audio = document.getElementById('gameAudio');
     const muteBtn = document.getElementById('muteBtn');
     const muteText = document.getElementById('muteText');
-  
     if (audio.muted) {
       audio.muted = false;
       muteText.textContent = 'off';

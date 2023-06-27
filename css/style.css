@@ -1,7 +1,7 @@
 body {
     padding: 0px;
     text-align: center;
-    font-family: "Verdana";
+    font-family:'Times New Roman', Times, serif
     background-position: center;
     background-color: white; 
     color: black;
@@ -13,13 +13,34 @@ body {
     float :center;
   }
  
-  .logo {
-    width: 400px;
-  }
+.logo {
+    width: 200px;
+    text-align: left;
+}
 
-  .box {
+//Avatars 
+
+.avatarBas {
+    width: 250px;}
+
+.avatarGabs {
+    width: 200px;}
+
+.avatarOllie{
+    width: 180px;}
+
+.avatarMagicMike {
+    width: 195px;}
+
+.avatarSherry {
+    width: 165px;}
+
+.juneBug {
+    width: 150px;}
+
+.box {
     border: solid;
-    background-color: white;
+    background-color: white; 
     border-width: 5px;
   }
   
